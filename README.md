@@ -1,6 +1,6 @@
-# Typelist
+# Typesong
 
-Type the lyrics of any song while it plays. Search a song, and Typelist finds its synced lyrics on LRCLIB and the track on YouTube Music. You need no account and no API key.
+Type the lyrics of any song while it plays. Search a song, and Typesong finds its synced lyrics on LRCLIB and the track on YouTube Music. You need no account and no API key.
 
 ## Features
 
@@ -8,7 +8,7 @@ Type the lyrics of any song while it plays. Search a song, and Typelist finds it
 - Synced lyrics from LRCLIB. You can pick another lyrics version before you start.
 - Untimed mode for songs that only have plain lyrics.
 - Easy mode (no capitals, punctuation or accents), "Wait for me", and a sync offset you change with `[` and `]`.
-- If a video can't be embedded, Typelist tries other uploads. If none plays, you can use your own player.
+- If a video can't be embedded, Typesong tries other uploads. If none plays, you can use your own player.
 - Light, dark or system theme. Best scores and recent songs are saved in your browser.
 
 ## Run it
@@ -67,11 +67,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Legal
 
-Typelist is an independent project. It is not affiliated with, endorsed by, or sponsored by YouTube, Google, or LRCLIB.
+Typesong is an independent project. It is not affiliated with, endorsed by, or sponsored by YouTube, Google, or LRCLIB.
 
-- Lyrics belong to their authors and publishers. Typelist shows them one line at a time as typing practice and doesn't store or republish them.
-- Music plays through the official YouTube embed. Typelist never downloads, records, or proxies audio or video.
-- The search endpoint uses an undocumented YouTube Music interface. It may change or stop working, and using it may be subject to YouTube's Terms of Service. If you deploy Typelist, you're responsible for that use.
-- Typelist collects no personal data. Settings and scores stay in your browser's `localStorage`.
+- Lyrics belong to their authors and publishers. Typesong shows them one line at a time as typing practice and doesn't store or republish them.
+- Music plays through the official YouTube embed. Typesong never downloads, records, or proxies audio or video.
+- The search endpoint uses an undocumented YouTube Music interface. It may change or stop working, and using it may be subject to YouTube's Terms of Service. If you deploy Typesong, you're responsible for that use.
+- Typesong collects no personal data. Settings and scores stay in your browser's `localStorage`.
 
 Code is released under the [MIT License](LICENSE). Lucide icons are under the ISC license. Instrument Sans and JetBrains Mono are under the SIL Open Font License.

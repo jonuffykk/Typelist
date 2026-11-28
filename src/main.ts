@@ -22,9 +22,9 @@ const store = <T,>(key: string, fallback: T) => ({
   },
   set: (v: T) => localStorage.setItem(key, JSON.stringify(v)),
 })
-const settingsStore = store('typelist:settings', { easy: true, wait: false, offset: 0, theme: 'light' as Theme })
-const bestsStore = store<Record<string, { wpm: number; acc: number }>>('typelist:bests', {})
-const recentStore = store<Track[]>('typelist:recent', [])
+const settingsStore = store('typesong:settings', { easy: true, wait: false, offset: 0, theme: 'light' as Theme })
+const bestsStore = store<Record<string, { wpm: number; acc: number }>>('typesong:bests', {})
+const recentStore = store<Track[]>('typesong:recent', [])
 let settings = settingsStore.get()
 const songKey = (s: Track) => s.videoId || `lrclib:${s.lrclibId}`
 const choiceCache = new Map<string, LyricsChoice[]>()
@@ -76,7 +76,7 @@ const isDark = () => document.documentElement.dataset.theme === 'dark'
 const header = (back = false) => `
   <header class="top">
     ${back ? `<button class="icon-btn" data-act="home" aria-label="Back to search">${icon('arrow-left')}</button>` : ''}
-    <a class="mark" href="#" data-act="home">type<span>list</span></a>
+    <a class="mark" href="#" data-act="home">type<span>song</span></a>
     <button class="icon-btn" data-act="theme" aria-label="Switch to ${isDark() ? 'light' : 'dark'} theme">${icon(isDark() ? 'sun' : 'moon')}</button>
     <button class="icon-btn" data-act="settings" aria-label="Settings">${icon('settings-2')}</button>
   </header>`
@@ -104,7 +104,7 @@ function home() {
   view(`${header()}
   <main class="home">
     <h1>Type the lyrics of any song while it plays.</h1>
-    <p class="lede">Search a song. Typelist finds its synced lyrics and the track on YouTube Music, then you type along.</p>
+    <p class="lede">Search a song. Typesong finds its synced lyrics and the track on YouTube Music, then you type along.</p>
     <form class="search" role="search">
       ${icon('search')}
       <input name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Song or artist" value="${esc(lastQuery)}" aria-label="Search songs" />

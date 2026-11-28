@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping with Typelist.
+Thanks for helping with Typesong.
 
 ## Setup
 

@@ -2,7 +2,7 @@ import type { Song } from '../api/search'
 export type { Song }
 
 const LRCLIB = 'https://lrclib.net/api'
-const HEADERS = { 'Lrclib-Client': 'typelist/1.0' }
+const HEADERS = { 'Lrclib-Client': 'typesong/1.0' }
 
 export type Track = Song & { lrclibId?: number }
 export type SearchSource = 'ytm' | 'lrclib'

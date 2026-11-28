@@ -13,7 +13,7 @@ const api: Connect.NextHandleFunction = async (req, res, next) => {
 export default defineConfig({
   plugins: [
     {
-      name: 'typelist-api',
+      name: 'typesong-api',
       configureServer: (server) => void server.middlewares.use(api),
       configurePreviewServer: (server) => void server.middlewares.use(api),
     },
