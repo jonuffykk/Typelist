@@ -41,11 +41,10 @@ Static-only hosts also work. Search then falls back to LRCLIB, and songs play wi
 
 ## How it works
 
-`server/ytm.ts` calls YouTube Music's InnerTube search with the `WEB_REMIX` client and the songs filter, the same approach as the Metrolist app. Browsers can't call it directly (no CORS), so `vite.config.ts` serves it at `/api/search` in development and `api/search.ts` does the same in production. Lyrics come from LRCLIB straight from the browser. Playback uses the official YouTube IFrame Player API. [DOSSIER.md](DOSSIER.md) has the full research notes.
+`api/search.ts` calls YouTube Music's InnerTube search with the `WEB_REMIX` client and the songs filter, the same approach as the Metrolist app. Browsers can't call it directly (no CORS), so it runs as a Vercel function at `/api/search`. In development, `vite.config.ts` serves the same handler. Lyrics come from LRCLIB straight from the browser. Playback uses the official YouTube IFrame Player API. [DOSSIER.md](DOSSIER.md) has the full research notes.
 
 ```
-api/search.ts    serverless search endpoint
-server/ytm.ts    InnerTube search, parser and cache
+api/search.ts    InnerTube search, parser, cache and the Vercel function
 src/main.ts      screens, typing engine, game loop
 src/lyrics.ts    search client, lyrics matching, LRC parser
 src/player.ts    YouTube player and internal clock

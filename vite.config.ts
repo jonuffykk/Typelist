@@ -1,5 +1,5 @@
 import { defineConfig, type Connect } from 'vite'
-import { handleSearch } from './server/ytm'
+import { handleSearch } from './api/search'
 
 const api: Connect.NextHandleFunction = async (req, res, next) => {
   if (!req.url?.startsWith('/api/search')) return next()

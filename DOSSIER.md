@@ -165,8 +165,7 @@ Lyrics on an internal clock. The user plays the song anywhere (Spotify, Apple Mu
 ```
 index.html
 vite.config.ts     dev/preview middleware for /api/search
-server/ytm.ts      InnerTube search + parser + cache (shared)
-api/search.ts      serverless function for production
+api/search.ts      InnerTube search + parser + cache, and the Vercel function
 src/main.ts        screens, typing engine, game loop
 src/lyrics.ts      search client, LRCLIB matching, LRC parser, normalizer
 src/player.ts      YouTube embed clock + internal clock

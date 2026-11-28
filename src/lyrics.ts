@@ -1,4 +1,4 @@
-import type { Song } from '../server/ytm'
+import type { Song } from '../api/search'
 export type { Song }
 
 const LRCLIB = 'https://lrclib.net/api'
